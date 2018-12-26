@@ -5,19 +5,17 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 import 'rxjs/add/operator/map';
-import { AuFaInputComponent } from './lib/au-fa-input/au-fa-input.component';
-import { InputRefDirective } from './lib/common/input-ref.directive';
+import { AuInputModule } from './lib/au-fa-input/au-input.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AuFaInputComponent,
-    InputRefDirective
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AuInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
