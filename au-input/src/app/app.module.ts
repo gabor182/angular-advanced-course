@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 import 'rxjs/add/operator/map';
-import { AuInputModule } from './lib/au-fa-input/au-input.module';
+import { AuInputModule } from './lib/au-input.module';
 
 @NgModule({
   declarations: [
