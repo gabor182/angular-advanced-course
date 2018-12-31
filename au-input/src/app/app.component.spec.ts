@@ -1,12 +1,16 @@
 import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
+import { AuFaInputComponent } from './lib/au-fa-input/au-fa-input.component';
+import { InputRefDirective } from './lib/common/input-ref.directive';
 
 describe('AppComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [
-                AppComponent
+                AppComponent,
+                AuFaInputComponent,
+                InputRefDirective
             ],
         }).compileComponents();
     }));
