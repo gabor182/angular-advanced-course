@@ -8,7 +8,7 @@ import { InputRefDirective } from '../common/input-ref.directive';
 })
 export class AuFaInputComponent implements OnInit, AfterContentInit {
   @Input() icon: string;
-  
+
   @ContentChild(InputRefDirective) input: InputRefDirective;
 
   constructor() { }
