@@ -18,7 +18,7 @@ export class AuTabPanelComponent implements OnInit, AfterContentInit {
 
   ngAfterContentInit() {
     const selectedTab = this.tabs.find(x => x.selected);
-    if (!selectedTab) {
+    if (!selectedTab && this.tabs.first) {
       this.tabs.first.selected = true;
     }
   }
@@ -26,5 +26,11 @@ export class AuTabPanelComponent implements OnInit, AfterContentInit {
   selectTab(tab: AuTabComponent): void {
     this.tabs.forEach(x => x.selected = false);
     tab.selected = true;
+  }
+
+  get tabsContext() {
+    return {
+      tabs: this.tabs
+    }
   }
 }
