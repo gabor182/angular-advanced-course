@@ -1,4 +1,4 @@
-import { Component, OnInit, ContentChildren, QueryList, AfterContentInit } from '@angular/core';
+import { Component, OnInit, ContentChildren, QueryList, AfterContentInit, TemplateRef, Input } from '@angular/core';
 import { AuTabComponent } from 'app/au-tab/au-tab.component';
 
 @Component({
@@ -10,6 +10,9 @@ export class AuTabPanelComponent implements OnInit, AfterContentInit {
 
   @ContentChildren(AuTabComponent)
   tabs: QueryList<AuTabComponent>;
+
+  @Input()
+  headerTemplate: TemplateRef<any>;
 
   constructor() { }
 
